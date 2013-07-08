@@ -5,7 +5,7 @@ module AirbrakeExplorer
     set :root, ROOT_PATH
 
     get '/' do
-      'Hello world'
+      haml :index
     end
   end
 end
