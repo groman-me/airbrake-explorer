@@ -1,1 +1,10 @@
-%div.hello Hello Airbrake
+%table.table
+  %thead
+    %tr
+      %th Class
+      %th Message
+      %th Count
+  %tbody
+    - ab_errors.each do |error|
+      = haml :tr_error, locals: { error: error }
+

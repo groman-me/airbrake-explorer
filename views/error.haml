@@ -1,0 +1,6 @@
+%table.table
+  %tbody
+    - error.each_pair do |k, v|
+      %tr
+        %td #{k.inspect}
+        %td #{v.inspect}
