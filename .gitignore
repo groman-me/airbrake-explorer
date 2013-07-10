@@ -1,3 +1,4 @@
 # RVM
 .ruby-gemset
 .ruby-version
+config/airbrake.yml
