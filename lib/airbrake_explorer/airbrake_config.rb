@@ -3,6 +3,7 @@ require 'airbrake-api'
 require 'active_support/logger'
 require 'active_support/cache'
 require 'airbrake_explorer/core_ext/hash'
+require 'middleware/ab_caching'
 
 class AirbrakeConfig
 
@@ -31,7 +32,7 @@ protected
   def cache_middleware
     [
       [
-        FaradayMiddleware::Caching,
+        Middleware::AbCaching,
         ActiveSupport::Cache::FileStore.
           new(AirbrakeExplorer::CACHE_PATH,
               :namespace => from_config_file['account'] #, :expires_in => 300
