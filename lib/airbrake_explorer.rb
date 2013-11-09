@@ -3,6 +3,7 @@ module AirbrakeExplorer
   LIBRARY_PATH = File.join(ROOT_PATH, 'lib')
   PUBLIC_PATH  = File.join(ROOT_PATH, 'public')
   CONFIG_PATH  = File.join(ROOT_PATH, 'config')
+  CACHE_PATH   = File.join(ROOT_PATH, 'cache')
 
   $LOAD_PATH << LIBRARY_PATH
 

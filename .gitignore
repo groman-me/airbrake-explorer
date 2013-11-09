@@ -1,4 +1,12 @@
-# RVM
+# ruby
 .ruby-gemset
 .ruby-version
+
+# Airbrake credentials
 config/airbrake.yml
+
+# Cached AB responses
+cache
+
+# Temp dir
+tmp
