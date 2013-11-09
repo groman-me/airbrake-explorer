@@ -1,0 +1,14 @@
+- hash.each_pair do |k, val|
+  - key = k.to_s
+  - if val.is_a?(Hash)
+    %li{id: key.object_id}
+      %label{for: key.object_id}= key
+      %ul
+        = haml :hash_tree,
+               locals: { hash: val,
+                         parent: "#{parent}[#{key}]"}
+  - else	
+    %li
+      %input{id: key.object_id, type: :checkbox,
+             name: "#{parent}[#{key}]" }
+      %label{for: key.object_id }= "#{key} => #{val}"

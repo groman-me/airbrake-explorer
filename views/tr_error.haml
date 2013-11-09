@@ -1,5 +1,5 @@
 %tr
   %td
-    %a{href: "/errors/#{error.id}"} #{error.error_class}
+    - error_link(error)
   %td #{error.error_message}
   %td #{error.notices_count}

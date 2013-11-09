@@ -1,0 +1,6 @@
+%a{href: "/errors/#{error_id}/similar_errors/customize"} Customize
+%table.table
+  %tbody
+    - notices.each do |notice|
+      %tr
+        %td= pretty_pre_tag(notice.to_h)

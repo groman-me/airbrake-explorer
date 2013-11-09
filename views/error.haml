@@ -1,6 +1,9 @@
+%a{href: "/errors/#{error.id}/similar_errors"} Similar errors
+
 %table.table
   %tbody
     - error.each_pair do |k, v|
       %tr
         %td #{k.inspect}
         %td #{v.inspect}
+

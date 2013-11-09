@@ -1,0 +1,4 @@
+%form{action: "/errors/#{error_id}/similar_errors", method: :get}
+  %ul
+    = haml :hash_tree, locals: { hash: hash_info, parent: 'filter' }
+  %input{ type: :submit, value: 'save' }

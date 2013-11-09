@@ -1,5 +1,5 @@
 require 'singleton'
-require File.join(AirbrakeExplorer::LIBRARY_PATH, 'airbrake_config')
+require 'airbrake_explorer/airbrake_config'
 
 module AirbrakeExplorer
   class Config
