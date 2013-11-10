@@ -3,4 +3,8 @@
   %tbody
     - notices.each do |notice|
       %tr
-        %td= pretty_pre_tag(notice.to_h)
+        %td
+          %pre
+            %code
+              = preserve do
+                = pretty_tag(notice.to_h)
