@@ -26,6 +26,11 @@ module AirbrakeExplorer
       haml :customize_similars, locals: { hash_info: first_notice(error_id).keys_info }
     end
 
+    get '/errors/:error_id/similar_errors/:id' do
+      haml :similar_errors,
+           locals: { notices: Array.wrap(api.notice(params[:id].to_i, error_id)) }
+    end
+
     protected
 
     def api
