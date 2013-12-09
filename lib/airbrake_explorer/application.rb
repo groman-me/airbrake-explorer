@@ -10,7 +10,7 @@ module AirbrakeExplorer
     helpers Sinatra::ApplicationHelper
 
     get '/' do
-      haml :index, locals: { ab_errors: api.errors }
+      haml :index, locals: { ab_errors: api.errors(params.slice('project_id')) }
     end
 
     get '/errors/:error_id' do
